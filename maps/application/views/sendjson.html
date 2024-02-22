@@ -1,0 +1,330 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="../../assets/css/dicapi.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="position-relative" style="position: fixed; top:0%">
+        <input class="btn btn-dark" type="file" id="inputFileName"  onchange="excelExport(event)" />
+        <input class="btn btn-dark position-absolute bottom-0 end-0" type="button" value="엑셀다운로드"
+        onclick="download();" />
+        <div id="naver-api-text" class="p-3 mb-2 bg-secondary text-white">2차 작업버튼은 1차 작업이 완료된 후에 눌러주세요.<br>네이버 초당 호출 API 제한으로 인해 속도가 저하됩니다. <br> 
+            <button type="button" id="second-job-btn" class="btn btn-primary">2차작업버튼</button>
+            <span id="text-warning" class="text-warning">최우선 검색 결과로 정확하지 않을 수 있습니다. 1차 작업 결과물에 나오는 데이터는 단순 작업 계산을 위한 데이터입니다. 오류는 무시하세요.</span></div>
+        <a id="alarm-msg" class="text-primary fs-4 position-absolute top-0 start-50 translate-middle-x"
+            style="text-decoration-line: none;"> 좌측에 보이는 파일 선택을 해주세요.</a>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div id="spinner-grow" class="spinner-grow" style="display:none;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    <table id="table01" border="1">
+        <!-- <th>한글명</th>
+        <th>영문명</th>
+        <th>설명</th> -->
+
+    </table>
+</body>
+
+</html>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
+
+<script>
+
+    $(function () {
+    });
+    
+    let table01 = document.getElementById('table01'); // 메인 테이블 
+    let table_h = document.getElementById('table-h');   // 메인 테이블 내 헤더
+
+    let chkLoopVal;     
+    let chkProcess = 0;     // 1차 검증 건너뛰고 2차 누르는지
+    var word_arr = [];
+    var key_idx;  
+    var word_search;    // woar_arr 내 k_word , e_word 중 존재하는 데이터 입력 변수
+    let word_search_arr = [];   
+    let watingTime = document.getElementById('wating-time');
+
+    let new_word_arr = [];
+    let tranText_arr = [];
+
+    // 날짜
+    // let today = new Date();
+
+    // let year = today.getFullYear(); // 년도
+    // let month = ("0" + (today.getMonth() + 1)).slice(-2);  // 월
+    // let day = ("0" + today.getDate()).slice(-2);  // 날짜
+    // let hours = ("0" + today.getHours()).slice(-2); // 시
+    // let minutes = ("0" + today.getMinutes()).slice(-2);  // 분 
+
+    // let fileDate = year + month + day + hours + minutes;
+
+    // 1차 작업완료 후 2차 작업 버튼
+    document.getElementById('second-job-btn').addEventListener('click', function() {
+        getTranslate();
+    });
+
+    function excelExport(event) {
+        document.getElementById('table01').innerHTML = '';
+        var input = event.target;
+        var reader = new FileReader();
+        reader.onload = function () {
+            var fileData = reader.result;
+            var wb = XLSX.read(fileData, { type: 'binary' });
+            // var wb.SheetNames.forEach(function(sheetName))
+            // for (i=0; i<)
+            wb.SheetNames.forEach(function (sheetName, index, arr) {
+                var rowObj = XLSX.utils.sheet_to_json(wb.Sheets[sheetName]);
+                // console.log(JSON.stringify(rowObj), index);
+                // word_list.push(rowObj);
+
+                for (var key in rowObj) {
+                    word_arr.push(rowObj[key]);
+                    // console.log('length' , word_arr.length);
+
+                };
+                // console.log('rowOjb[key] : ', word_arr);
+                callDicApi(key, rowObj);
+            })
+        };
+        reader.readAsBinaryString(input.files[0]);
+    }
+
+    function callDicApi(key, val) {
+        let seconds = Math.round(val.length / 10);
+
+        let interval = setInterval(() => {
+            timer();
+            if (seconds == -1) {
+                clearInterval(interval)
+            }
+        }, 1000);
+
+        let timer = () => {
+            // document.getElementById('wating-time').innerText = seconds--;
+        }
+
+
+        for (i = 0; i < val.length; i++) {
+            // for (i=0; i<1; i++) {
+            if (val[i].kword === undefined) {
+                val[i].search = val[i].eword;
+            } else {
+                val[i].search = val[i].kword;
+            }
+            word_search = val[i].search;
+        }
+        getWordSearch(word_arr);
+    }
+
+
+    function getWordSearch(param_word_arr) {
+        table01.innerHTML = '';
+        table01.innerHTML   += '    <thead>';
+        table01.innerHTML   += '            <th style="width:10vw;">인덱스</th><th style="width:95vw;">한글명</th>';
+        table01.innerHTML   += '    <thead>';
+        // document.getElementById('spinner-grow').style.display = 'block';
+
+        document.getElementById('alarm-msg').innerText = '작업이 완료되면 2차작업버튼을 눌러주세요.';
+
+        // table01.innerHTML   += '    <div></div>';
+        for(i=0; i<param_word_arr.length; i++) {
+            let arr_search = param_word_arr[i].search;
+            // console.log('search : ', param_word_arr[i].search);
+            $.ajax({
+                url: "./dicapi.php",
+                type: "post",
+                traditional: true,	// ajax 배열 넘기기 옵션!
+                data: { "search": param_word_arr[i].search},
+                // dataType: "json",
+                success: function (data) {
+                    let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
+                    let secPaseData = JSON.parse(parseData);    // ajax 수신 값 파시 2
+                    let titleData;  // sear 키워드 html 태그 날려버릴 변수
+                    let description; 
+                    let subDes_e;
+                    let subDes_res;
+
+                    for (j=0; j<10; j++) {
+                        titleData = secPaseData.items[j].title.replace(/<[^>]*>?/g, '');
+                        description = secPaseData.items[j].description.replace(/<[^>]*>?/g, '');
+                        subDes_e = description.indexOf(".");
+                        chkLoopVal = param_word_arr.length;
+
+                        if ( titleData == arr_search) {
+                            // console.log('replace title : ', titleData);
+                            
+                            if (subDes_e == -1) {
+                                subDes_res = description.substring(0);
+                            } else {
+                                subDes_res = description.substring(0, subDes_e);
+                            }
+
+                            new_word_arr.push(
+                                {
+                                    k_title: titleData,
+                                    e_title: "",
+                                    des: subDes_res
+                                }
+                            );
+                            // console.log(`new_arr : ${new_word_arr.length}`);
+                            // console.log(`chkLoopVal : ${chkLoopVal}`);
+                            // chkLoopVal = chkLoopVal - new_word_arr.length;
+                            // console.log(`chkVal : ${chkLoopVal}`);
+                            
+                            break;
+                        } else {
+                            // console.log('-----------------------------------------------------');
+                        };
+                    };
+                        table01.innerHTML   += '    <tbody>';
+                        table01.innerHTML   += '    <td>' + titleData + '</td><td>' + subDes_res + '</td>';
+                        table01.innerHTML   += '    </tbody>';
+                    
+                    
+                },
+                error: function (request, status, error) {
+                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                },
+                // async: false
+            });
+            
+        }
+        chkProcess = 1;
+        
+    }
+
+    function getTranslate() {
+        document.getElementById('alarm-msg').innerText = '2차 작업을 진행합니다.';
+
+        console.log('chk : ' , chkProcess);
+        if (chkProcess == 0) {
+            alert("파일 선택부터 진행해주세요."); 
+            window.location.reload();
+            sleep(1000);
+        } else {
+
+        table01.innerHTML = '';
+        table01.innerHTML   += '    <thead>';
+        table01.innerHTML   += '            <th style="width:5vw;">인덱스</th><th style="width:5vw;">한글명</th><th style="width:5vw;">영문명</th><th style="text-align:center;">설명</th>';
+        table01.innerHTML   += '    <thead>';
+
+        let k_title;
+        for (i=0; i<new_word_arr.length; i++) {
+
+            k_title = new_word_arr[i].k_title;
+            // console.log('idx : ', k_title);
+
+            $.ajax({
+                url: "./Papagoapi.php",
+                type: "post",
+                traditional: true,	// ajax 배열 넘기기 옵션!
+                data: {"k_title" : k_title},
+                success: function (data) {
+
+                    // spinner-grow
+                    let parseData = JSON.parse(data);
+                    let tranText = parseData.message.result.translatedText;
+                    // console.log(`i : ${i}`); 
+                    new_word_arr[i].e_title = tranText;
+                    new_word_arr[i].idx     = i;
+
+                    getSubStrRes(new_word_arr[i], i);
+                    
+                },
+                error:function(request,status,error){
+                    alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                },
+                async: false
+            });
+        }
+    }
+
+    }
+
+    function getSubStrRes(e, idx) {
+        // console.log(e);
+
+        document.getElementById('spinner-grow').style.display = 'none';
+        document.getElementById('alarm-msg').innerText = '완료되었습니다. 엑셀다운로드를 클릭해 다운로드하세요.';
+
+        table01.innerHTML   += '    <tbody>';
+        table01.innerHTML   += '    <td>' + idx + '</td><td>' + e.k_title + '</td><td>' + e.e_title + '</td><td>' + e.des + '</td>';
+        table01.innerHTML   += '    </tbody>';
+
+    }
+
+    /**
+* 엑셀 다운로드
+* @param fileName 엑셀파일명 (ex. excel.xls)
+* @param sheetName 시트명
+* @param headers 시트내용(html - table)
+*/
+    function _excelDown(fileName, sheetName, sheetHtml) {
+        var html = '';
+        html += '<html xmlns:x="urn:schemas-microsoft-com:office:excel">';
+        html += '    <head>';
+        html += '        <meta http-equiv="content-type" content="application/vnd.ms-excel; charset=UTF-8">';
+        html += '        <xml>';
+        html += '            <x:ExcelWorkbook>';
+        html += '                <x:ExcelWorksheets>';
+        html += '                    <x:ExcelWorksheet>'
+        html += '                        <x:Name>' + sheetName + '</x:Name>';   // 시트이름
+        html += '                        <x:WorksheetOptions><x:Panes></x:Panes></x:WorksheetOptions>';
+        html += '                    </x:ExcelWorksheet>';
+        html += '                </x:ExcelWorksheets>';
+        html += '            </x:ExcelWorkbook>';
+        html += '        </xml>';
+        html += '    </head>';
+        html += '    <body>';
+
+        // ----------------- 시트 내용 부분 -----------------
+
+        html += sheetHtml;
+        // ----------------- //시트 내용 부분 -----------------
+
+        html += '    </body>';
+        html += '</html>';
+
+        // 데이터 타입
+        var data_type = 'data:application/vnd.ms-excel';
+        var ua = window.navigator.userAgent;
+        var blob = new Blob([html], { type: "application/csv;charset=utf-8;" });
+
+        if ((ua.indexOf("MSIE ") > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) && window.navigator.msSaveBlob) {
+            // ie이고 msSaveBlob 기능을 지원하는 경우
+            navigator.msSaveBlob(blob, fileName);
+        } else {
+            // ie가 아닌 경우 (바로 다운이 되지 않기 때문에 클릭 버튼을 만들어 클릭을 임의로 수행하도록 처리)
+            var anchor = window.document.createElement('a');
+            anchor.href = window.URL.createObjectURL(blob);
+            anchor.download = fileName;
+            document.body.appendChild(anchor);
+            anchor.click();
+
+            // 클릭(다운) 후 요소 제거
+            document.body.removeChild(anchor);
+        }
+    }
+
+    function download() {
+        // 대상 테이블을 가져옴
+        var table = document.getElementById("table01");
+
+
+        if (table) {
+            // CASE 대상 테이블이 존재하는 경우
+
+            // 엑셀다운 (엑셀파일명, 시트명, 내부데이터HTML)
+            _excelDown("표준사전API_" + fileDate + ".xls", "단어명", table.outerHTML)
+        }
+    }
+</script>
