@@ -379,14 +379,14 @@ function getWordSearch(param_word_arr) {
                         table01.innerHTML   += '    <td>' + titleData + '</td><td>' + description + '</td>';
                         table01.innerHTML   += '    </tbody>';
 
-                    } catch (error) {
-                        console.log('실패 :',error);
+                    } catch (error) {   // api 통신 중 일치하지 않는 단어를 만날 때
+                        // console.log('실패 :',error);
                         
                     }
                     
                 },
                 error: function (request, status, error) {
-                    alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
+                    // alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
                 },
                 async: false
             });
