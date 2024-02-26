@@ -204,7 +204,7 @@ let tranText_arr = [];
 
 const Toast =  Swal.mixin({
         title: "작업중이에요. 기다려주세요.",
-        text: "초당 6~10건의 데이터 통신을 합니다.\n\n 오래걸려도 기다려주세요.",
+        html: "초당 6~10건의 데이터 통신을 합니다.<br> 오래걸려도 기다려주세요.",
         
         showConfirmButton: false,
         // timer: 1500
@@ -327,6 +327,9 @@ function callDicApi(key, val) {
 // 국립국어원 표준국어대사전
 function getWordSearch(param_word_arr) {
     // console.log(param_word_arr);
+    let allCount = 100000;
+    let remainCount = allCount;
+    
     table01.innerHTML = '';
     table01.innerHTML   += '    <thead>';
     table01.innerHTML   += '            <th style="width:10vw;">단어</th><th style="width:95vw;">설명</th>';
