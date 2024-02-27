@@ -8,11 +8,11 @@
 		<meta name="keywords" content="gooey, pixel, tooltip, animation, gsap, javascript" />
 		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="favicon.ico">
-		<link rel="stylesheet" href="https://use.typekit.net/sma8eef.css"/>
-		<link rel="stylesheet" type="text/css" href="../../assets/css/tooltip.css" />
-		<link rel="stylesheet" type="text/css" href="../../assets/css/base.css" />
+		<!-- <link rel="stylesheet" href="https://use.typekit.net/sma8eef.css"/> -->
+		<link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
 		<script>document.documentElement.className="js";</script>
-		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+		<!-- <script src="//tympanus.net/codrops/adpacks/analytics.js"></script> -->
 		
 	</head>
 	<body>
@@ -153,8 +153,8 @@
 			</defs>
 		</svg>
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
-		<script src="../../assets/js/gsap.min.js"></script>
-		<script type="module" src="../../assets/js/index.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script type="module" src="js/index.js"></script>
 	</body>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
