@@ -800,6 +800,13 @@ img {
     margin-bottom: 20px;
 }
 
+.welcome_slide_text h3,
+.single_catagory_area h3 {
+    color: #fff;
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+}
+
 .welcome_slide_text h5,
 .single_catagory_area h5 {
     color: #fff;
