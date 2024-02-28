@@ -402,6 +402,21 @@ body #cdawrap {
 	border-radius: 5px;
 }
 
+.progress-bar {
+	width: 43vw;
+	height: 20px;
+	background-color: #f0f0f0;
+	position: relative;
+	/* display: none; */
+}
+
+.progress {
+	height: 100%;
+	background-color: #4caf50;
+	width: 0;
+	transition: width 0.5s ease;
+}
+
 @keyframes glitch-anim {
 	0% { 
 		transform: translate3d(-5px,0,0) scale3d(-1,-1,1);

@@ -32,6 +32,9 @@
 				<div class="content__inner">
 
                     <span id="alarm-msg"><strong>왼쪽 아래 설명을 읽어주세요.</strong></span>
+                    <div class="progress-bar">
+                        <div class="progress" id="loadingBar"></div>
+                    </div>
                     <div id="bar-container" class="bar-container">
                         <!-- <div id=""content-bar" class="bar">bar</div> -->
                     </div>
@@ -212,6 +215,12 @@ const Toast =  Swal.mixin({
         // timer: 1500
 });
 
+// 로딩 바를 채우는 함수 (0% ~ 100%)
+function fillLoadingBar(percent) {
+    const progressBar = document.getElementById('loadingBar');
+    progressBar.style.width = percent + '%';
+}
+
 
 // 1차 작업완료 후 2차 작업 버튼
 document.getElementById('second-job-btn').addEventListener('click', function() {
@@ -220,6 +229,8 @@ document.getElementById('second-job-btn').addEventListener('click', function() {
         getTranslate();
     }, 1500);
 });
+
+
 
 // alert 팝업 
 var action_popup = {
@@ -327,47 +338,42 @@ function callDicApi(key, val) {
 }
 
 // 국립국어원 표준국어대사전 API
-function sendWordArr(word_arr) {
+async function sendWordArr(word_arr) {
     table01.innerHTML = '';
     table01.innerHTML   += '    <thead>';
     table01.innerHTML   += '            <th style="width:10vw;">단어</th><th style="width:95vw;">설명</th>';
     table01.innerHTML   += '    <thead>';
 
-    $.ajax({
+    const response = await $.ajax({
         url: "../controllers/Opendictapi_copy.php",
         type: "post",
         traditional: true,	// ajax 배열 넘기기 옵션!
         timeout: 3000000,
         data: { "word_arr": JSON.stringify(word_arr)},
         success: function (data) {
-            // try {
-                console.log('파싱전');
                 let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
-                console.log('파싱후');
                 let parseDataLengh = parseData.length;   // 파싱 데이터 길이
                 for(i=0; i < parseDataLengh; i++) {
                     jsonString = parseData[i];
-                    console.log('for문 파싱');
                     try {
                         const iParsing = JSON.parse(jsonString);
-                        console.log('for문 파싱2');
                         const itemData = iParsing.channel.item[0];
                         const itemWord  = itemData.word;
                         const word  = itemWord.replace(/[^\w\dㄱ-힣]/g, "");
                         const definition = itemData.sense.definition;
-        
+                        let percent = (i+1) / parseDataLengh * 100;
+                        fillLoadingBar(percent);
+                        conosl.log(percent);
                         table01.innerHTML   += '    <tbody>';
                         table01.innerHTML   += '    <td>' + word + '</td><td>' + definition + '</td>';
                         table01.innerHTML   += '    </tbody>';
-                        console.log(definition);
-                        console.log(word);
-                        chkProcess = 1; // 1단계부터 했는지 검증
-                        korDicApiRes();
-                            
+                        
                     } catch (error) {
                         continue;
+                    }
                 }
-            }
+            chkProcess = 1; // 1단계부터 했는지 검증
+            korDicApiRes();
             
         }, 
         error: function (request, status, error) {
