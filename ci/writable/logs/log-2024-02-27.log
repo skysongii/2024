@@ -119,3 +119,99 @@ in APPPATH\Views\layout\layout.php on line 133.
  8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
  9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:40:13 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:40:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "welcome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('welcome')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:40:33 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "welcome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('welcome')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:40:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "welcome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('welcome')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:40:34 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "welcome.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('welcome.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('welcome', [], true)
+ 3 APPPATH\Controllers\Home.php(13): view('welcome')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:42:43 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:42:47 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:42:51 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:42:52 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-27 23:42:55 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "gohead.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('gohead.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('gohead', [], true)
+ 3 APPPATH\Helpers\render_helper.php(9): view('gohead', [], [])
+ 4 APPPATH\Controllers\Gohead.php(10): render('gohead')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Gohead->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Gohead))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

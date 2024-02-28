@@ -198,6 +198,8 @@ var word_search;    // woar_arr 내 k_word , e_word 중 존재하는 데이터 �
 let word_search_arr = [];   
 let watingTime = document.getElementById('wating-time');
 
+let allCount = 100000;       // 페이지 응답 대기 방지
+let remainCount = allCount;
 
 let new_word_arr = [];
 let tranText_arr = [];
@@ -327,8 +329,7 @@ function callDicApi(key, val) {
 // 국립국어원 표준국어대사전
 function getWordSearch(param_word_arr) {
     // console.log(param_word_arr);
-    let allCount = 100000;
-    let remainCount = allCount;
+
     
     table01.innerHTML = '';
     table01.innerHTML   += '    <thead>';
@@ -341,8 +342,6 @@ function getWordSearch(param_word_arr) {
         let percent_bar = Math.round(i/param_word_arr.length*100);
         // table01.innerHTML   += '    <div></div>';
         for(i=0; i<param_word_arr.length; i++) {
-    
-            // document.getElementById('bar-container').innerHTML = '<div id=""content-bar" class="bar" style="width:' +percent_bar +'">bar</div>';
             
             let arr_search = param_word_arr[i].search;
             // console.log('search : ', param_word_arr[i].search);
@@ -354,6 +353,7 @@ function getWordSearch(param_word_arr) {
                     url: "../controllers/Opendictapi.php",
                     type: "post",
                     traditional: true,	// ajax 배열 넘기기 옵션!
+                    timeout: 3000000,
                     data: { "search": param_word_arr[i].search},
                     // dataType: "json",
                     success: function (data) {
