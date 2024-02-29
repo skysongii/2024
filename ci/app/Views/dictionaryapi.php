@@ -159,8 +159,6 @@
     
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
 		<script src="/2024/CI/public/js/gsap.min.js"></script>
-		<!-- <script type="module" src="/2024/CI/public/js/index.js"></script>
-		<script type="module" src="/2024/CI/public/js/redirect.js"></script> -->
 		<script src="/2024/CI/public/js/index.js"></script>
 		<script src="/2024/CI/public/js/redirect.js"></script>
 	</body>
@@ -206,17 +204,25 @@ var word_search;    // woar_arr 내 k_word , e_word 중 존재하는 데이터 �
 let word_search_arr = [];   
 let watingTime = document.getElementById('wating-time');
 
+let allCount = 100000;       // 페이지 응답 대기 방지
+let remainCount = allCount;
 
 let new_word_arr = [];
 let tranText_arr = [];
 
 const Toast =  Swal.mixin({
-        title: "작업중이에요. 기다려주세요.",
-        html: "초당 6~10건의 데이터 통신을 합니다.<br> 오래걸려도 기다려주세요.",
+        title: "작업을 시작했어요.<br> 초당 5~10건의 <br>데이터를 처리해요.",
+        html : "<img src=../../assets/vendor/loading.gif>",
         
         showConfirmButton: false,
         // timer: 1500
 });
+
+// 로딩 바를 채우는 함수 (0% ~ 100%)
+// function fillLoadingBar(percent) {
+//     const progressBar = document.getElementById('loadingBar');
+//     progressBar.style.width = percent + '%';
+// }
 
 
 // 1차 작업완료 후 2차 작업 버튼
@@ -226,6 +232,8 @@ document.getElementById('second-job-btn').addEventListener('click', function() {
         getTranslate();
     }, 1500);
 });
+
+
 
 // alert 팝업 
 var action_popup = {
@@ -293,7 +301,7 @@ function excelExport(event, i) {
     var input = event.target;
     var reader = new FileReader();
     Toast.fire({
-        
+        // html : "<img src=../../assets/vendor/loading.gif>"
     });
 
     setTimeout(() => {
@@ -329,98 +337,85 @@ function callDicApi(key, val) {
         }
         word_search = val[i].search;
     }
-    getWordSearch(word_arr);
+    sendWordArr(word_arr);
 }
 
-// 국립국어원 표준국어대사전
-function getWordSearch(param_word_arr) {
-    // console.log(param_word_arr);
-    let allCount = 100000;
-    let remainCount = allCount;
-    
+// 국립국어원 표준국어대사전 API
+// function sendWordArr(word_arr) {
+//     table01.innerHTML = '';
+//     table01.innerHTML   += '    <thead>';
+//     table01.innerHTML   += '            <th style="width:10vw;">단어</th><th style="width:95vw;">설명</th>';
+//     table01.innerHTML   += '    <thead>';
+
+//     const response = $.ajax({
+//         url: "/2024/CI/public/Dictionaryapi/",
+//         type: "post",
+//         traditional: true,	// ajax 배열 넘기기 옵션!
+//         timeout: 3000000,
+//         data: { "word_arr": JSON.stringify(word_arr)},
+//         success: function (data) {
+//                 let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
+//                 let parseDataLengh = parseData.length;   // 파싱 데이터 길이
+//                 for(i=0; i < parseDataLengh; i++) {
+//                     jsonString = parseData[i];
+//                     try {
+//                         const iParsing = JSON.parse(jsonString);
+//                         const itemData = iParsing.channel.item[0];
+//                         const itemWord  = itemData.word;
+//                         const word  = itemWord.replace(/[^\w\dㄱ-힣]/g, "");
+//                         const definition = itemData.sense.definition;
+//                         let percent = (i+1) / parseDataLengh * 100;
+//                         // fillLoadingBar(percent);
+//                         table01.innerHTML   += '    <tbody>';
+//                         table01.innerHTML   += '    <td>' + word + '</td><td>' + definition + '</td>';
+//                         table01.innerHTML   += '    </tbody>';
+                        
+//                         new_word_arr.push(      
+//                             {
+//                                 k_title: word,
+//                                 e_title: "",
+//                                 des: definition
+//                             }
+//                         );
+//                     } catch (error) {
+//                         continue;
+//                     }
+//                 }
+//             chkProcess = 1; // 1단계부터 했는지 검증
+//             korDicApiRes();
+            
+//         }, 
+//         error: function (request, status, error) {
+//             console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+
+//         }
+//     })
+
+// }
+
+
+// 국립국어원 표준국어대사전 API 테스트
+function sendWordArr(word_arr) {
     table01.innerHTML = '';
     table01.innerHTML   += '    <thead>';
     table01.innerHTML   += '            <th style="width:10vw;">단어</th><th style="width:95vw;">설명</th>';
     table01.innerHTML   += '    <thead>';
-    try {
-        // document.getElementById('spinner-grow').style.display = 'block';
-        document.getElementById('alarm-msg').innerText = '작업이 완료되면 2차작업버튼을 눌러주세요.';
-        
-        let percent_bar = Math.round(i/param_word_arr.length*100);
-        // table01.innerHTML   += '    <div></div>';
-        for(i=0; i<param_word_arr.length; i++) {
-    
-            // document.getElementById('bar-container').innerHTML = '<div id=""content-bar" class="bar" style="width:' +percent_bar +'">bar</div>';
-            
-            let arr_search = param_word_arr[i].search;
-            // console.log('search : ', param_word_arr[i].search);
-            getParamLen(param_word_arr.length);
-    
-            function getParamLen(param_len) {
-                            
-                $.ajax({
-                    url: "../controllers/Opendictapi.php",
-                    type: "post",
-                    traditional: true,	// ajax 배열 넘기기 옵션!
-                    data: { "search": param_word_arr[i].search},
-                    // dataType: "json",
-                    success: function (data) {
-                        let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
-                        let description;                        // 단어 설명
-                        let titleData;  // search 키워드 
-    
-                        try {
-                            let secPaseData = JSON.parse(parseData);    // ajax 수신 값 파시 2
-                            
-                            titleData = secPaseData.channel.item[0].word.replace('-','');   // 단어명
-                            description = secPaseData.channel.item[0].sense.definition;  // 단어 설명
-                            // percent_bar = Math.round(i/param_len*100);
-                            // document.getElementById('content-bar').style.width=percent_bar;
-                            console.log(i / param_len * 100);
-                            new_word_arr.push(      
-                                {
-                                    k_title: titleData,
-                                    e_title: "",
-                                    des: description
-                                }
-                            );
-    
-                            // console.log('new_word_arr : ', new_word_arr[i]);
-    
-                            alarm_msg.innerHTML   =  i;
-                            table01.innerHTML   += '    <tbody>';
-                            table01.innerHTML   += '    <td>' + titleData + '</td><td>' + description + '</td>';
-                            table01.innerHTML   += '    </tbody>';
-    
-                        } catch (error) {   // api 통신 중 일치하지 않는 단어를 만날 때
-                            // console.log('실패 :',error);
-                            
-                        }
-                        
-                    },
-                    error: function (request, status, error) {
-                        // alert("code:" + request.status + "\n" + "message:" + request.responseText + "\n" + "error:" + error);
-                    },
-                    async: false
-                });
-            }
+
+    const response = $.ajax({
+        url: "/2024/CI/public/Dictionaryapi/",
+        type: "post",
+        traditional: true,	// ajax 배열 넘기기 옵션!
+        timeout: 3000000,
+        data: { "word_arr": JSON.stringify(word_arr)},
+        success: function (data) {
+            console.log(data);            
+        }, 
+        error: function (request, status, error) {
+            console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+
         }
-        chkProcess = 1; // 1단계부터 했는지 검증
-        korDicApiRes();
+    })
 
-    } catch (e) {
-        Toast.fire({
-            title: "뭔가 잘못된 것 같아요..",
-            html: "제대로 된 파일 올린거 맞아요..?<br> 새로고침 해드릴테니 맞는 방식으로 진행해주세요. ",
-            icon: "error"
-        });
-        setTimeout(() => {
-            location.reload();
-            
-        }, 1500);
-
-    }
-    
 }
 
 // 1차 작업 alert
@@ -437,7 +432,7 @@ function korDicApiRes() {
 // 2차 작업 alert
 function papagoApiReq() {
     Toast.fire({
-        text: "2차 작업을 시작했어요"
+        // text: "2차 작업을 시작했어요"
     });
 };
 
