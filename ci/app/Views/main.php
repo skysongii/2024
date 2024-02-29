@@ -35,7 +35,7 @@
                                 <div class="welcome_slide_text">
                                     <h5 data-animation="bounceInDown" data-delay="0" data-duration="500ms">* 표준단어 만드는 과정이 궁금하신가요?</h5>
                                     <h3 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">당신의 시간을 효율적으로 관리해요</h3><br>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInUp" data-delay="1s" data-duration="500ms">만들러 가기</a>
+                                    <a href="/2024/CI/public/Redirect/dictionaryapi/" class="btn karl-btn" data-animation="fadeInUp" data-delay="1s" data-duration="500ms">만들러 가기</a>
                                 </div>
                             </div>
                         </div>
@@ -137,6 +137,7 @@
         <!-- ****** Quick View Modal Area End ****** -->
 
     
+
     <!-- </div> -->
     <!-- /.wrapper end -->
 

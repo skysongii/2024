@@ -405,6 +405,10 @@ body #cdawrap {
 	border-radius: 5px;
 }
 
+#go-home {
+	width: 5vw;
+	float: right;
+}
 @keyframes glitch-anim {
 	0% { 
 		transform: translate3d(-5px,0,0) scale3d(-1,-1,1);

@@ -1,6 +1,24 @@
 // Importing the Tooltip class from the tooltip.js file to be used for creating tooltip instances.
-import { Tooltip } from './tooltip.js';
+// import { Tooltip } from './tooltip.js';
 
+document.addEventListener('DOMContentLoaded', () => {
+    "use strict";
+  
+    /**
+     * Preloader
+     */
+    const preloader = document.querySelector('#preloader');
+    if (preloader) {
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          preloader.classList.add('loaded');
+        }, 1000);
+        setTimeout(() => {
+          preloader.remove();
+        }, 2000);
+      });
+    }
+});
 // Selecting all elements with the class 'trigger' which will activate tooltips on mouse events.
 const triggers = document.querySelectorAll('.trigger');
 
@@ -62,4 +80,8 @@ triggers.forEach((trigger, index) => {
         }, 40); // Delay before hiding the tooltip
     });
 });
+
+let goHome = () => {
+    location.href = '/2024/CI/public';
+}
 

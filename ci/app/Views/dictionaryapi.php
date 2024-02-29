@@ -30,8 +30,11 @@
 			</div>
 			<div class="content ui">
 				<div class="content__inner">
+                    <div>
+                        <span id="alarm-msg"><strong>왼쪽 아래 설명을 읽어주세요.</strong></span>
+                        <button id="go-home" onclick="goHome();">메인으로</button>
 
-                    <span id="alarm-msg"><strong>왼쪽 아래 설명을 읽어주세요.</strong></span>
+                    </div>
                     <div id="bar-container" class="bar-container">
                         <!-- <div id=""content-bar" class="bar">bar</div> -->
                     </div>
@@ -152,9 +155,11 @@
 				</filter>
 			</defs>
 		</svg>
+    
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
-		<script src="js/gsap.min.js"></script>
+		<script src="/2024/CI/public/js/gsap.min.js"></script>
 		<script type="module" src="/2024/CI/public/js/index.js"></script>
+		<script type="module" src="/2024/CI/public/js/redirect.js"></script>
 	</body>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
