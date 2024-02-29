@@ -11,6 +11,7 @@
 		<!-- <link rel="stylesheet" href="https://use.typekit.net/sma8eef.css"/> -->
 		<link rel="stylesheet" type="text/css" href="/2024/CI/public/css/tooltip.css" />
 		<link rel="stylesheet" type="text/css" href="/2024/CI/public/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="/2024/CI/public/css/btn-style.css" />
 		<script>document.documentElement.className="js";</script>
 		<!-- <script src="//tympanus.net/codrops/adpacks/analytics.js"></script> -->
 		
@@ -32,7 +33,7 @@
 				<div class="content__inner">
                     <div>
                         <span id="alarm-msg"><strong>왼쪽 아래 설명을 읽어주세요.</strong></span>
-                        <button id="go-home" onclick="goHome();">메인으로</button>
+                        <button class="w-btn w-btn-indigo" type="button" onclick="goHome();">메인으로</button>
 
                     </div>
                     <div id="bar-container" class="bar-container">
@@ -158,8 +159,10 @@
     
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
 		<script src="/2024/CI/public/js/gsap.min.js"></script>
-		<script type="module" src="/2024/CI/public/js/index.js"></script>
-		<script type="module" src="/2024/CI/public/js/redirect.js"></script>
+		<!-- <script type="module" src="/2024/CI/public/js/index.js"></script>
+		<script type="module" src="/2024/CI/public/js/redirect.js"></script> -->
+		<script src="/2024/CI/public/js/index.js"></script>
+		<script src="/2024/CI/public/js/redirect.js"></script>
 	</body>
 </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
