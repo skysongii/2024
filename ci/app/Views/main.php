@@ -78,19 +78,18 @@
         <!-- ****** Top Catagory Area Start ****** -->
         <section class="top_catagory_area d-md-flex clearfix">
             <!-- Single Catagory -->
-            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(img/bg-img/bg-2.jpg);">
+            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(img/bg-img/profile.jpg);">
                 <div class="catagory-content">
-                    <h6>On Accesories</h6>
-                    <h2>Sale 30%</h2>
-                    <a href="#" class="btn karl-btn">SHOP NOW</a>
+                    <!-- <h6>제가 궁금한가요?</h6> -->
+                    <h4>제가 궁금한가요?</h4>
+                    <a href="#" class="btn karl-btn">낱낱이 알기</a>
                 </div>
             </div>
             <!-- Single Catagory -->
-            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(img/bg-img/bg-3.jpg);">
+            <div class="single_catagory_area d-flex align-items-center bg-img" style="background-image: url(img/bg-img/domestic.png);">
                 <div class="catagory-content">
-                    <h6>in Bags excepting the new collection</h6>
-                    <h2>Designer bags</h2>
-                    <a href="#" class="btn karl-btn">SHOP NOW</a>
+                    <h4 style="color: black;">제가 다녀온 곳이에요</h4>
+                    <a href="#" class="btn karl-btn" style="color:black">지도 보러가기</a>
                 </div>
             </div>
         </section>
