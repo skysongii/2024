@@ -403,13 +403,41 @@ function sendWordArr(word_arr) {
     table01.innerHTML   += '    <thead>';
 
     const response = $.ajax({
-        url: "/2024/CI/public/Dictionaryapi/",
+        url: "/2024/CI/public/Dictionaryapi/index",
         type: "post",
         traditional: true,	// ajax 배열 넘기기 옵션!
         // timeout: 3000000,
         data: { "word_arr": JSON.stringify(word_arr)},
         success: function (data) {
-            console.log(data);            
+            let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
+                let parseDataLengh = parseData.length;   // 파싱 데이터 길이
+                for(i=0; i < parseDataLengh; i++) {
+                    jsonString = parseData[i];
+                    try {
+                        const iParsing = JSON.parse(jsonString);
+                        const itemData = iParsing.channel.item[0];
+                        const itemWord  = itemData.word;
+                        const word  = itemWord.replace(/[^\w\dㄱ-힣]/g, "");
+                        const definition = itemData.sense.definition;
+                        let percent = (i+1) / parseDataLengh * 100;
+                        // fillLoadingBar(percent);
+                        table01.innerHTML   += '    <tbody>';
+                        table01.innerHTML   += '    <td>' + word + '</td><td>' + definition + '</td>';
+                        table01.innerHTML   += '    </tbody>';
+                        
+                        new_word_arr.push(      
+                            {
+                                k_title: word,
+                                e_title: "",
+                                des: definition
+                            }
+                        );
+                    } catch (error) {
+                        continue;
+                    }
+                }
+            chkProcess = 1; // 1단계부터 했는지 검증
+            korDicApiRes();
         }, 
         error: function (request, status, error) {
             console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);

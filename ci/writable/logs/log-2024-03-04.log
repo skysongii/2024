@@ -66,3 +66,10 @@ in APPPATH\Controllers\Dictionaryapi.php on line 10.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 02:52:00 --> ErrorException: Undefined array key "word_arr"
+in APPPATH\Controllers\Dictionaryapi.php on line 10.
+ 1 APPPATH\Controllers\Dictionaryapi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "word_arr"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dictionaryapi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
