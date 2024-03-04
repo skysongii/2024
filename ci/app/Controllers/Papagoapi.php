@@ -1,7 +1,13 @@
 <?php
+namespace App\Controllers;
+
+class Papagoapi extends BaseController
+{
+
+    public function index()
+    {
     $k_title = $_POST['k_title'];
 
-    // echo $k_title;
     $papaClientId = "Zl5cWEvAYNKjJTOjZOp0";
     $papaClientSecret = "XuOAz8trv0";
 
@@ -32,5 +38,6 @@
       echo "Error 내용:".$papaResponse;
 
     }
-
+  }
+}
 ?>

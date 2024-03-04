@@ -6,9 +6,7 @@ class Dictionaryapi extends BaseController
 
     public function index()
     {
-        
         $search = $_POST['word_arr'];
-        // print_r($search);
 
         $json_de = json_decode($search, true);
         $result_arr = [];

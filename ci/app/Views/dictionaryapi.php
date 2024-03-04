@@ -493,23 +493,23 @@ function getTranslate() {
             k_title = new_word_arr[i].k_title;
 
         $.ajax({
-            url: "../controllers/Papagoapi.php",
+            url: "/2024/CI/public/Papagoapi/index",
             type: "post",
             traditional: true,	// ajax 배열 넘기기 옵션!
             data: {"k_title" : k_title},
             success: function (data) {
-
+                console.log(data);
                 // spinner-grow
-                let parseData = JSON.parse(data);
-                let tranText = parseData.message.result.translatedText;
-                new_word_arr[i].e_title = tranText;
-                new_word_arr[i].idx     = i;
+                // let parseData = JSON.parse(data);
+                // let tranText = parseData.message.result.translatedText;
+                // new_word_arr[i].e_title = tranText;
+                // new_word_arr[i].idx     = i;
 
-                getSubStrRes(new_word_arr[i], i);
+                // getSubStrRes(new_word_arr[i], i);
                 
             },
             error:function(request,status,error){
-                alert("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
             },
             async: false
         });
