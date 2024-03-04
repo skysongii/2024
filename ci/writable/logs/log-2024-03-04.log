@@ -1,0 +1,68 @@
+CRITICAL - 2024-03-04 01:17:19 --> ErrorException: Undefined array key "word_arr"
+in APPPATH\Controllers\Dictionaryapi.php on line 9.
+ 1 APPPATH\Controllers\Dictionaryapi.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "word_arr"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 9)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dictionaryapi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 01:44:35 --> ErrorException: Undefined array key "word_arr"
+in APPPATH\Controllers\Dictionaryapi.php on line 13.
+ 1 APPPATH\Controllers\Dictionaryapi.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "word_arr"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 13)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dictionaryapi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 01:57:18 --> ErrorException: Undefined variable $coockie_name
+in APPPATH\Controllers\Dictionaryapi.php on line 3.
+ 1 APPPATH\Controllers\Dictionaryapi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $coockie_name', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 3)
+ 2 SYSTEMPATH\Router\AutoRouter.php(161): include_once('C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php')
+ 3 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Dictionaryapi', 'get')
+ 4 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Dictionaryapi')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Dictionaryapi')
+ 6 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 01:57:25 --> ErrorException: Undefined variable $cookieName
+in APPPATH\Controllers\Dictionaryapi.php on line 3.
+ 1 APPPATH\Controllers\Dictionaryapi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cookieName', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 3)
+ 2 SYSTEMPATH\Router\AutoRouter.php(161): include_once('C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php')
+ 3 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Dictionaryapi', 'get')
+ 4 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Dictionaryapi')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Dictionaryapi')
+ 6 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 01:57:25 --> ErrorException: Undefined variable $cookieName
+in APPPATH\Controllers\Dictionaryapi.php on line 3.
+ 1 APPPATH\Controllers\Dictionaryapi.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cookieName', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 3)
+ 2 SYSTEMPATH\Router\AutoRouter.php(161): include_once('C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php')
+ 3 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Dictionaryapi', 'get')
+ 4 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Dictionaryapi')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Dictionaryapi')
+ 6 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 01:59:05 --> ErrorException: Undefined variable $viewDirectory
+in APPPATH\Controllers\Dictionaryapi.php on line 4.
+ 1 APPPATH\Controllers\Dictionaryapi.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $viewDirectory', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 4)
+ 2 SYSTEMPATH\Router\AutoRouter.php(161): include_once('C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php')
+ 3 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Dictionaryapi', 'get')
+ 4 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Dictionaryapi')
+ 5 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Dictionaryapi')
+ 6 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 02:01:15 --> ErrorException: Undefined array key "word_arr"
+in APPPATH\Controllers\Dictionaryapi.php on line 10.
+ 1 APPPATH\Controllers\Dictionaryapi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "word_arr"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dictionaryapi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-04 02:03:33 --> ErrorException: Undefined array key "word_arr"
+in APPPATH\Controllers\Dictionaryapi.php on line 10.
+ 1 APPPATH\Controllers\Dictionaryapi.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "word_arr"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Dictionaryapi.php', 10)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Dictionaryapi->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dictionaryapi))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -35,7 +35,7 @@
                             <div class="top_single_area d-flex align-items-center">
                                 <!-- Logo Area -->
                                 <div class="top_logo">
-                                    <img src="img/core-img/pierrot.png" alt="">
+                                    <!-- <img src="img/core-img/pierrot.png" alt=""> -->
 
                                     <a href="https://test.snong.com/2024/CI/public/"><img src="img/core-img/snong-ci.png" alt=""></a>
                                 </div>

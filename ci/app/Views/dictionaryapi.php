@@ -212,7 +212,8 @@ let tranText_arr = [];
 
 const Toast =  Swal.mixin({
         title: "작업을 시작했어요.<br> 초당 5~10건의 <br>데이터를 처리해요.",
-        html : "<img src=../../assets/vendor/loading.gif>",
+        html : "<img src=/2024/CI/public/img/core-img/loading.gif>",
+
         
         showConfirmButton: false,
         // timer: 1500
@@ -405,7 +406,7 @@ function sendWordArr(word_arr) {
         url: "/2024/CI/public/Dictionaryapi/",
         type: "post",
         traditional: true,	// ajax 배열 넘기기 옵션!
-        timeout: 3000000,
+        // timeout: 3000000,
         data: { "word_arr": JSON.stringify(word_arr)},
         success: function (data) {
             console.log(data);            

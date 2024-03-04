@@ -1,11 +1,12 @@
 <?php
-
 namespace App\Controllers;
 
 class Dictionaryapi extends BaseController
 {
+
     public function index()
     {
+        
         $search = $_POST['word_arr'];
 
         // $json_de = json_decode($search, true);
@@ -13,7 +14,6 @@ class Dictionaryapi extends BaseController
 
         // foreach ($json_de as $key => $value) {
         //     $search = $value['search'];
-        //     //     echo $search;
 
         //     $ch = curl_init();  //파싱 대상을 담을 $ch변수를 초기화
         //     $url = 'https://stdict.korean.go.kr/api/search.do'; /*URL*/
@@ -21,7 +21,6 @@ class Dictionaryapi extends BaseController
         //     $queryParams .= '&' . 'q' . '=' . urlencode($search); //요청인수
         //     $queryParams .= '&' . 'type_search' . '=' . 'search'; //요청인수
         //     $queryParams .= '&' . 'req_type=json';
-
 
         //     curl_setopt($ch, CURLOPT_URL, $url . $queryParams); //파싱 대상 설정
         //     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);    //파싱한 결과를 string 형식으로 반환하도록 설정
@@ -34,6 +33,6 @@ class Dictionaryapi extends BaseController
 
         // }
         // echo json_encode($result_arr);
-        print_r($search);
+        // print_r($search);
     }
 }

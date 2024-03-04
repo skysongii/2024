@@ -65,7 +65,7 @@
                                 <div class="welcome_slide_text">
                                     <h5 data-animation="fadeInDown" data-delay="0" data-duration="500ms">* 기쁨부터 슬픔까지 공존해요.</h5>
                                     <h3 data-animation="bounceInDown" data-delay="500ms" data-duration="500ms">저의 이야기가 들어있어요</h3><br>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInRightBig" data-delay="1s" data-duration="500ms">블로그 보러가기</a>
+                                    <a href="https://ssnong.tistory.com" onclick="window.open(this.href, '_blank'); return false;" class="btn karl-btn" data-animation="fadeInRightBig" data-delay="1s" data-duration="500ms">블로그 보러가기</a>
                                 </div>
                             </div>
                         </div>

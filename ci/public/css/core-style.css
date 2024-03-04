@@ -538,6 +538,10 @@ img {
     z-index: 1;
 }
 
+.help-line {
+    margin-top: 30px;
+}
+
 .help-line a {
     width: auto;
     height: 35px;
