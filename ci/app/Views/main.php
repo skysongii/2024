@@ -50,7 +50,7 @@
                                 <div class="welcome_slide_text">
                                     <h5 data-animation="fadeInDown" data-delay="0" data-duration="500ms">* 여러 종류의 서비스가 있어요</h5>
                                     <h3 data-animation="fadeInUp" data-delay="500ms" data-duration="500ms">데이터 포털에서 헤매지 말아요.<br> Open API 서비스</h3><br>
-                                    <a href="#" class="btn karl-btn" data-animation="fadeInLeftBig" data-delay="1s" data-duration="500ms">사용하러 가기</a>
+                                    <a href="/2024/CI/public/Redirect/openapi/" class="btn karl-btn" data-animation="fadeInLeftBig" data-delay="1s" data-duration="500ms">사용하러 가기</a>
                                 </div>
                             </div>
                         </div>

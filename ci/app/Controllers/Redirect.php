@@ -14,4 +14,9 @@ class Redirect extends BaseController
     public function dictionaryapi() {
         return view('dictionaryapi');
     }
+
+    // 오픈 API
+    public function openapi() {
+        return view('openapi/sub_openapi');
+    }
 }
