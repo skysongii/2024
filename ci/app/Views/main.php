@@ -8,12 +8,12 @@
             <!-- Single Discount Area -->
             <div class="single-discount-area">
                 <h5>표준단어를 만들래요</h5>
-                <h6><a href="#">편하게 일해요.</a></h6>
+                <h6><a href="/2024/CI/public/Redirect/dictionaryapi/">편하게 일해요.</a></h6>
             </div>
             <!-- Single Discount Area -->
             <div class="single-discount-area">
                 <h5>공공데이터 포털은 너무 복잡해요</h5>
-                <h6><a href="#">단순하게 보고싶어요</a></h6>
+                <h6><a href="/2024/CI/public/Redirect/openapi/">단순하게 보고싶어요</a></h6>
             </div>
             <!-- Single Discount Area -->
             <div class="single-discount-area">

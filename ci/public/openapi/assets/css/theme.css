@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url("https://unpkg.com/open-props/open-props.min.css");
+
 /* -------------------------------------------------------------------------- */
 /*                                 Theme                                      */
 /* -------------------------------------------------------------------------- */
@@ -18496,3 +18499,46 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 -----------------------------------------------*/
 
 /*# sourceMappingURL=theme.css.map */
+
+/** 평범한 버튼 */
+.custom-button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+
+
+/** 둥근 그래디언트 버튼 */
+.round-gradient-button {
+  background: radial-gradient(circle, #FFB30E, #FEF7E9);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bolder;
+}
+
+.round-gradient-button:hover {
+  background: radial-gradient(circle, #0056b3, #007BFF);
+  color: white;
+}
+
+.round-gradient-button:active {
+  background: radial-gradient(circle, #003a80, #0056b3);
+  color: white;
+}
