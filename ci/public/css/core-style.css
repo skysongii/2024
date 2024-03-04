@@ -452,6 +452,8 @@ img {
 .cart {
     position: relative;
     z-index: 200;
+    width: 15vw;
+    text-align: right;
 }
 
 .cart-list {
