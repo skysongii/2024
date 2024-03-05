@@ -1,0 +1,268 @@
+ERROR - 2024-03-05 01:47:12 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM b...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM b...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:47:12 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM book')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:47:53 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:47:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:49:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:49:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('SELECT * FROM api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:55:51 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:55:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:55:52 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:55:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(10): CodeIgniter\Database\BaseConnection->query('select * from api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 01:56:10 --> Error: Class "App\Controllers\Controller" not found
+in APPPATH\Controllers\Mysqltest.php on line 4.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once()
+ 2 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Mysqltest', 'get')
+ 3 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Mysqltest')
+ 4 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Mysqltest')
+ 5 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 01:56:11 --> Error: Class "App\Controllers\Controller" not found
+in APPPATH\Controllers\Mysqltest.php on line 4.
+ 1 SYSTEMPATH\Router\AutoRouter.php(161): include_once()
+ 2 SYSTEMPATH\Router\Router.php(514): CodeIgniter\Router\AutoRouter->getRoute('Mysqltest', 'get')
+ 3 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->autoRoute('Mysqltest')
+ 4 SYSTEMPATH\CodeIgniter.php(823): CodeIgniter\Router\Router->handle('Mysqltest')
+ 5 SYSTEMPATH\CodeIgniter.php(450): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:56:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:56:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-05 01:56:24 --> Error connecting to the database: mysqli_sql_exception: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'snong', '1234', 'library', 3306, '', 0)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#6 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Unknown database 'library' in C:\xampp\htdocs\2024\CI\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\2024\CI\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\2024\CI\app\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from a...')
+#3 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+#4 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+#5 C:\xampp\htdocs\2024\CI\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\2024\CI\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2024-03-05 01:56:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: Unknown database 'library'
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 APPPATH\Controllers\Mysqltest.php(9): CodeIgniter\Database\BaseConnection->query('select * from api_info')
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 04:24:57 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Mysqltest.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 04:25:03 --> Error: Call to a member function find() on null
+in APPPATH\Controllers\Mysqltest.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 04:30:47 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Mysqltest.php on line 12.
+ 1 APPPATH\Controllers\Mysqltest.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Mysqltest.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 05:32:53 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Mysqltest.php on line 12.
+ 1 APPPATH\Controllers\Mysqltest.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Mysqltest.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 13:33:44 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Mysqltest.php on line 12.
+ 1 APPPATH\Controllers\Mysqltest.php(12): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Mysqltest.php', 12)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Mysqltest->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
