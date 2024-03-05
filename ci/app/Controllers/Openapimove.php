@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controllers;
-
+use CodeIgniter\Controller;
 class Openapimove extends BaseController
 {
     public function index()
@@ -30,6 +30,21 @@ class Openapimove extends BaseController
 
     public function insertQuery() {
         // $apiInsertModel = model('ApiinsertModel');
-        echo base_url()."ㅁㄴㅇㅁㄴ";
+        // echo base_url()."ㅁㄴㅇㅁㄴ";
+        $org_nm=$this->request->getVar("org-nm");
+
+        $api_nm=$this->request->getVar("api-nm");
+
+        $db = \Config\Database::connect("default", false);
+
+        $db->query("insert into api_info set
+
+            public_org_nm='".addslashes($org_nm)."',
+
+            api_nm='".addslashes($api_nm)."'");
+
+        echo $org_nm . " API 정보가 입력되었습니다.";
+        echo "<script>setTimeout(() => { window.close()}, 1000);</script>";
+        // echo $org_nm . " " . $api_nm;
     }
 }

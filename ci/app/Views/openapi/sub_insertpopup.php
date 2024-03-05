@@ -8,11 +8,11 @@
     <form action="insertQuery" method="post">
         <div class="input-group input-group-lg" style="margin-top: 5%;">
             <span class="input-group-text" id="inputGroup-sizing-lg">기관명</span>
-            <input type="text" name="org-nm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <input type="text" name="org-nm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" value="">
         </div>
         <div class="input-group input-group-lg" style="margin-top: 5%;">
             <span class="input-group-text" id="inputGroup-sizing-lg">API명</span>
-            <input type="text" name="api-nm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+            <input type="text" name="api-nm" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" value="">
         </div>
 
         <div class="d-grid gap-2 col-6 mx-auto">
