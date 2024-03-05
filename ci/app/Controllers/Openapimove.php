@@ -27,4 +27,9 @@ class Openapimove extends BaseController
     public function insertPage() {
         return view('openapi/sub_insertpopup');
     }
+
+    public function insertQuery() {
+        // $apiInsertModel = model('ApiinsertModel');
+        echo base_url()."ㅁㄴㅇㅁㄴ";
+    }
 }
