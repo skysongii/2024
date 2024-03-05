@@ -23,4 +23,8 @@ class Openapimove extends BaseController
         return view('openapi/sub_search', ['info' => $data]);
         // return view('openapi/sub_search');
     }
+
+    public function insertPage() {
+        return view('openapi/sub_insertpopup');
+    }
 }

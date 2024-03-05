@@ -18546,3 +18546,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .idx-row { 
   text-align: center;
 }
+
+.insert-icon {
+  width: 8vw;
+  cursor: pointer;
+}

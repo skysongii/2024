@@ -100,23 +100,17 @@
 					<div class="col-lg-7">
 						<h5 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">현재 아래의 API들을 사용할 수 있어요</h5>
 						<h6 class="fw-bold fs-3 fs-lg-5 lh-sm text-center text-lg-start">원하는 API를 클릭하세요</h6>
+						
 					</div>
 					<div class="col-lg-4 text-lg-end text-center"><a class="btn btn-lg text-800 me-2" href="#" role="button">VIEW ALL <i class="fas fa-chevron-right ms-2"></i></a></div>
 					<div class="col-lg-auto position-relative">
 						<button class="carousel-control-prev s-icon-prev carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="prev"><span class="carousel-control-prev-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Previous</span></button>
+						<img class="insert-icon" src="/2024/CI/public/openapi/assets/img/inserticon.png" onclick="insertPopup();">
 						<button class="carousel-control-next s-icon-next carousel-icon" type="button" data-bs-target="#carouselSearchByFood" data-bs-slide="next"><span class="carousel-control-next-icon hover-top-shadow" aria-hidden="true"></span><span class="visually-hidden">Next</span></button>
 					</div>
 				</div>
 				<table class="table table-warning table-bordered table-hover">
-				<ul>
-    <?php foreach($info as $row): ?>
-        <li>
-            <?= $row['seq'] ?>
-            <?= $row['public_org_nm'] ?>
-            <?= $row['api_nm'] ?>
-        </li>
-    <?php endforeach; ?>
-</ul>
+
 					<thead class="table-success">
 						<tr style="text-align:center;">
 							<th scope="col" style="width:5vw;">순번</th>
@@ -125,11 +119,14 @@
 						</tr>
 					</thead>
 					<tbody>
+					<?php foreach($info as $row): ?>
 						<tr onclick="kisaSearchDomain();;">
-							<th class="idx-row" scope="row">1</th>
-							<td>한국인터넷진흥원</td>
-							<td>인터넷주소 정보 검색 서비스</td>
+							<th class="idx-row" scope="row"><?= $row['seq'] ?></th>
+							<td><?= $row['public_org_nm'] ?></td>
+							<td><?= $row['api_nm'] ?></td>
 						</tr>
+					<?php endforeach; ?>
+						<!-- <tr onclick="kisaSearchDomain();;">
 						<tr>
 							<th class="idx-row" scope="row">2</th>
 							<td>Jacob</td>
@@ -153,7 +150,7 @@
 						<tr>
 							<th class="idx-row" scope="row">3</th>
 							<td colspan="2">Larry the Bird</td>
-						</tr>
+						</tr> -->
 					</tbody>
 				</table>
 		</div><!-- end of .container-->
