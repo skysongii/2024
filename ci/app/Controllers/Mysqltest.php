@@ -9,7 +9,7 @@ class Mysqltest extends BaseController
         $apiModel = model('MysqltestModel');
         $data = $apiModel->findAll();
 
-        var_dump($data);
+        // var_dump($data);
         // return view('Task/index', ['tasks' => $data]);
     }
 

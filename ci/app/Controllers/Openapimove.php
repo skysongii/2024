@@ -16,6 +16,11 @@ class Openapimove extends BaseController
     }
 
     public function searchPage() {
-        return view('openapi/sub_search');
+        $apiModel = model('ApiinfoModel');
+        $data = $apiModel->findAll();
+
+        // var_dump($data);
+        return view('openapi/sub_search', ['info' => $data]);
+        // return view('openapi/sub_search');
     }
 }

@@ -1,3 +1,4 @@
+// 한국인터넷진흥원 - 
 const kisaSearchDomain = () => {
-    alert('키사');
+    window.open();
 }

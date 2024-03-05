@@ -266,3 +266,25 @@ in APPPATH\Controllers\Mysqltest.php on line 12.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Mysqltest))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:45:28 --> ErrorException: Undefined variable $tasks
+in APPPATH\Views\openapi\sub_search.php on line 112.
+ 1 APPPATH\Views\openapi\sub_search.php(112): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tasks', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 112)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-05 14:46:31 --> ErrorException: Undefined variable $rowd
+in APPPATH\Views\openapi\sub_search.php on line 115.
+ 1 APPPATH\Views\openapi\sub_search.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $rowd', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 115)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

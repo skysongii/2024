@@ -47,8 +47,8 @@
 					<button type="button" class="btn btn-warning text-dark border border-warning fs-2" onclick="location.href='/2024/CI/public/'">메인페이지로</button>
 					<div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="img-landing-banner" href="/2024/CI/public/Redirect/openapi/"><img class="img-fluid" src="/2024/CI/public/openapi/assets/img/cube.png" alt="hero-header" /></a></div>
 					<div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
-						<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">뽀요,</h1>
-						<h1 class="text-800 mb-5 fs-4">원하는 API가 있으신가요?<br class="d-none d-xxl-block" />사용하기 쉬울거예요</h1>
+						<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">검색하세요</h1>
+						<h1 class="text-800 mb-5 fs-4">API명/기관명으로 검색하세요<br class="d-none d-xxl-block" />밑에는 목록도 있어요</h1>
 						<div class="card w-xxl-75">
 							<div class="card-body">
 								<nav>
@@ -108,6 +108,15 @@
 					</div>
 				</div>
 				<table class="table table-warning table-bordered table-hover">
+				<ul>
+    <?php foreach($info as $row): ?>
+        <li>
+            <?= $row['seq'] ?>
+            <?= $row['public_org_nm'] ?>
+            <?= $row['api_nm'] ?>
+        </li>
+    <?php endforeach; ?>
+</ul>
 					<thead class="table-success">
 						<tr style="text-align:center;">
 							<th scope="col" style="width:5vw;">순번</th>
