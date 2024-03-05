@@ -18542,3 +18542,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background: radial-gradient(circle, #003a80, #0056b3);
   color: white;
 }
+
+.idx-row { 
+  text-align: center;
+}
