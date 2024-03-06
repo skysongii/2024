@@ -10,24 +10,25 @@ class Openapimove extends BaseController
         return render('main'); // layout을 포함한 view 호출
     }
 
-    // 오픈 API
+    // 뽀요
     public function openapi() {
         return view('openapi/sub_openapi');
     }
 
+    // 뽀요 다음페이지 (실질적인 검색페이지)
     public function searchPage() {
         $apiModel = model('ApiinfoModel');
         $data = $apiModel->findAll();
 
-        // var_dump($data);
         return view('openapi/sub_search', ['info' => $data]);
-        // return view('openapi/sub_search');
     }
 
+    // api 등록하기 버튼
     public function insertPage() {
         return view('openapi/sub_insertpopup');
     }
 
+    // api 등록 팝업창
     public function insertQuery() {
         // $apiInsertModel = model('ApiinsertModel');
         // echo base_url()."ㅁㄴㅇㅁㄴ";
@@ -45,6 +46,11 @@ class Openapimove extends BaseController
 
         echo $org_nm . " API 정보가 입력되었습니다.";
         echo "<script>setTimeout(() => { window.close()}, 1000);</script>";
-        // echo $org_nm . " " . $api_nm;
     }
+
+    // 인터넷도메인 정보검색 서비스 API
+    public function kisaDomain() {
+        return view('openapi/sub_kisadomain');
+    }
+
 }

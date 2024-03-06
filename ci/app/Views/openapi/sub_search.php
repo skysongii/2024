@@ -120,7 +120,7 @@
 					</thead>
 					<tbody>
 					<?php foreach($info as $row): ?>
-						<tr onclick="kisaSearchDomain();;">
+						<tr onclick="openApiFunc(<?= $row['seq'] ?>);;">
 							<th class="idx-row" scope="row"><?= $row['seq'] ?></th>
 							<td><?= $row['public_org_nm'] ?></td>
 							<td><?= $row['api_nm'] ?></td>

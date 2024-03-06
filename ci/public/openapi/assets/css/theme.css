@@ -18551,3 +18551,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 8vw;
   cursor: pointer;
 }
+
+.exp-str {
+  margin-top:5%;
+  text-align: center;
+}
