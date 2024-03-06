@@ -12,7 +12,7 @@ const openApiFunc = (val) => {
     console.log(window.screen.width);
 
         // window.open('/2024/CI/public/openapimove/kisaDomain', '', 'status=no, height=' + popupHeight  + 'vw, width=' + popupWidth  + 'vh, left=' + popupX + ', top='+ popupY);
-        window.open('/2024/CI/public/openapimove/kisaDomain', '', 'status=no, menubar=yes, status=yes, titlebar=yes, resizable=yes", height=' + popupHeight  + 'vw, width=' + popupWidth  + 'vh, left='+xPos+', top='+yPos);
+        window.open('/2024/CI/public/openapimove/kisaDomain', '', 'status=no, menubar=no, status=no, titlebar=no, resizable=no", height=' + popupHeight  + 'vw, width=' + popupWidth  + 'vh, left='+xPos+', top='+yPos);
     }        
 }
 
