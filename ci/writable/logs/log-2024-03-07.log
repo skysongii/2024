@@ -179,3 +179,137 @@ in APPPATH\Controllers\Openapisearch.php on line 32.
  3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
  4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:21:02 --> ArgumentCountError: Too few arguments to function App\Models\SearchModel::getApiName(), 0 passed in C:\xampp\htdocs\2024\CI\app\Controllers\Openapisearch.php on line 23 and exactly 1 expected
+in APPPATH\Models\SearchModel.php on line 22.
+ 1 APPPATH\Controllers\Openapisearch.php(23): App\Models\SearchModel->getApiName()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:21:22 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 SYSTEMPATH\Model.php(662): CodeIgniter\Database\BaseConnection->table(null)
+ 2 SYSTEMPATH\Model.php(864): CodeIgniter\Model->builder()
+ 3 APPPATH\Controllers\Openapisearch.php(23): CodeIgniter\Model->__call('getApiName', [])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:21:57 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Openapisearch.php on line 27.
+ 1 APPPATH\Controllers\Openapisearch.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:24:05 --> ArgumentCountError: Too few arguments to function App\Models\SearchModel::getApiName(), 0 passed in C:\xampp\htdocs\2024\CI\app\Controllers\Openapisearch.php on line 22 and exactly 1 expected
+in APPPATH\Models\SearchModel.php on line 22.
+ 1 APPPATH\Controllers\Openapisearch.php(22): App\Models\SearchModel->getApiName()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:56:52 --> ArgumentCountError: Too few arguments to function App\Models\SearchModel::getApiName(), 0 passed in C:\xampp\htdocs\2024\CI\app\Controllers\Openapisearch.php on line 22 and exactly 1 expected
+in APPPATH\Models\SearchModel.php on line 22.
+ 1 APPPATH\Controllers\Openapisearch.php(22): App\Models\SearchModel->getApiName()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:57:02 --> ArgumentCountError: Too few arguments to function App\Models\SearchModel::getApiName(), 0 passed in C:\xampp\htdocs\2024\CI\app\Controllers\Openapisearch.php on line 22 and exactly 1 expected
+in APPPATH\Models\SearchModel.php on line 22.
+ 1 APPPATH\Controllers\Openapisearch.php(22): App\Models\SearchModel->getApiName()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 16:58:49 --> ArgumentCountError: Too few arguments to function App\Models\SearchModel::getapiname(), 0 passed in C:\xampp\htdocs\2024\CI\app\Controllers\Openapisearch.php on line 22 and exactly 1 expected
+in APPPATH\Models\SearchModel.php on line 22.
+ 1 APPPATH\Controllers\Openapisearch.php(22): App\Models\SearchModel->getapiname()
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:09:36 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:12:12 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:17:57 --> ErrorException: Undefined variable $tasks
+in APPPATH\Views\openapi\sub_search.php on line 203.
+ 1 APPPATH\Views\openapi\sub_search.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tasks', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 203)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:18:22 --> ErrorException: Undefined variable $res
+in APPPATH\Views\openapi\sub_search.php on line 203.
+ 1 APPPATH\Views\openapi\sub_search.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $res', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 203)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:18:59 --> ErrorException: Undefined variable $searchRes
+in APPPATH\Views\openapi\sub_search.php on line 203.
+ 1 APPPATH\Views\openapi\sub_search.php(203): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $searchRes', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 203)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:19:30 --> ErrorException: Undefined variable $info
+in APPPATH\Views\openapi\sub_search.php on line 124.
+ 1 APPPATH\Views\openapi\sub_search.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapisearch.php(31): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:19:47 --> ErrorException: Undefined variable $info
+in APPPATH\Views\openapi\sub_search.php on line 124.
+ 1 APPPATH\Views\openapi\sub_search.php(124): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $info', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 124)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapisearch.php(31): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:22:26 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Openapisearch.php on line 32.
+ 1 APPPATH\Controllers\Openapisearch.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:22:30 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Openapisearch.php on line 32.
+ 1 APPPATH\Controllers\Openapisearch.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

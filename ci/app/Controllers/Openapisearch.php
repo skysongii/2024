@@ -14,26 +14,22 @@ class Openapisearch extends BaseController
     }
 
     public function index() {
-        // $iptApiVal=$this->input->post('iptApiVal');
-        $iptApiVal=$this->input->post();
-        
-        // $iptApi=$this->request->getVar("iptApi");
-
+        $iptApi=$this->request->getVar("iptApi");
+        // $topics = $this->topicModel->gets();
         // $info = $this->apiModel->gets();
-        // $info = $this->apiModel->getRow();
-        // var_dump($info);
-        // echo $iptApi;
-        echo $iptApiVal;
+        // $info = $this->apiModel->getApiame('주소');
+        // var_dump($info) ;
+        echo $iptApi;
     }
     public function chkVal() {
         // ini_set( "display_errors", 1 );
         // $iptApiVal=$this->input->post('iptApiVal');
         $iptApiVal=$this->request->getPost('iptApiVal');
-        echo($iptApiVal) ;
+        // echo "controller : ".$iptApiVal ;
 
-
-        // echo base_url();
-
+        $res = $this->apiModel->getApiName($iptApiVal);
+        $json_res = json_encode($res);
+        echo $json_res;
     }
 
 }

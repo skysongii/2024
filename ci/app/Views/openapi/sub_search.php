@@ -200,7 +200,10 @@ iptApiBtn.addEventListener('click', function() {
 	dataType: "text",
 	data: { "iptApiVal": iptApi.value},
 	success: function (data) {
+		let parseData = JSON.parse(data);       // ajax 수신 값 파싱 1
+
 		console.log(data);
+		// console.log(data[0]);
 	}, 
 	error: function (request, status, error) {
 		console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
