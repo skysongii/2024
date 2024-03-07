@@ -48,7 +48,7 @@
 					<div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="img-landing-banner" href="/2024/CI/public/Redirect/openapi/"><img class="img-fluid" src="/2024/CI/public/openapi/assets/img/cube.png" alt="hero-header" /></a></div>
 					<div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
 						<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">검색하세요</h1>
-						<h1 class="text-800 mb-5 fs-4">API명/기관명으로 검색하세요<br class="d-none d-xxl-block" />밑에는 목록도 있어요</h1>
+						<h1 class="text-800 mb-5 fs-4">API명/기관명으로 검색하세요<br class="d-none d-xxl-block" /><br>밑에는 목록도 있어요</h1>
 						<div class="card w-xxl-75">
 							<div class="card-body">
 								<nav>
@@ -59,20 +59,22 @@
 								</nav>
 								<div class="tab-content mt-3" id="nav-tabContent">
 									<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-										<form class="row gx-2 gy-2 align-items-center">
-											<div class="col">
+										<!-- <form action="/2024/CI/public/openapisearch/index" class="row gx-2 gy-2 align-items-center"> -->
+										<div class="row gx-2 gy-2 align-items-center">
+											<div class="col row gx-2 gy-2 align-items-center">
 												<!-- <div class="input-group-icon"><i class="fas fa-map-marker-alt text-danger input-box-icon"></i> -->
 												<label class="visually-hidden" for="inputDelivery">API</label>
-												<input class="form-control input-box form-foodwagon-control" id="inputDelivery" type="text" placeholder="API명으로 찾아드릴게요" />
+												<input class="form-control input-box form-foodwagon-control" id="iptApi" name="iptApi" type="text" placeholder="API명으로 찾아드릴게요" />
 												<!-- </div> -->
 											</div>
 											<div class="d-grid gap-3 col-sm-auto">
-												<button class="btn btn-danger" type="submit">검색</button>
+												<button id="iptApiBtn" class="btn btn-danger" type="submit">검색</button>
 											</div>
-										</form>
+										</div>
+										<!-- </form> -->
 									</div>
 									<div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-										<form class="row gx-4 gy-2 align-items-center">
+										<!-- <form class="row gx-4 gy-2 align-items-center"> -->
 											<div class="col">
 												<!-- <div class="input-group-icon"><i class="fas fa-map-marker-alt text-danger input-box-icon"></i> -->
 												<label class="visually-hidden" for="inputPickup">Address</label>
@@ -80,9 +82,9 @@
 												<!-- </div> -->
 											</div>
 											<div class="d-grid gap-3 col-sm-auto">
-												<button class="btn btn-danger" type="submit">검색</button>
+												<button class="btn btn-danger" type="button">검색</button>
 											</div>
-										</form>
+										<!-- </form> -->
 									</div>
 								</div>
 							</div>
@@ -122,7 +124,7 @@
 					<?php foreach($info as $row): ?>
 						<tr onclick="openApiFunc(<?= $row['seq'] ?>);;">
 							<th class="idx-row" scope="row"><?= $row['seq'] ?></th>
-							<td><?= $row['public_org_nm'] ?></td>
+							<td><?= $row['org_nm'] ?></td>
 							<td><?= $row['api_nm'] ?></td>
 						</tr>
 					<?php endforeach; ?>
@@ -181,4 +183,11 @@
 	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&amp;display=swap" rel="stylesheet">
 </body>
 
+<script>
+	let iptApi = document.getElementById('iptApi');	// api명 입력 input란
+	let iptApiBtn = document.getElementById('iptApiBtn');	// api명 입력 후 검색버튼
+	iptApiBtn.addEventListener('click', function() {
+		console.log(iptApi.value);
+	});
+</script>
 </html>

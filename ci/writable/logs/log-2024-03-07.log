@@ -1,0 +1,55 @@
+CRITICAL - 2024-03-07 13:41:58 --> ErrorException: Undefined array key "public_org_nm"
+in APPPATH\Views\openapi\sub_search.php on line 125.
+ 1 APPPATH\Views\openapi\sub_search.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "public_org_nm"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 125)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 13:42:03 --> ErrorException: Undefined array key "public_org_nm"
+in APPPATH\Views\openapi\sub_search.php on line 125.
+ 1 APPPATH\Views\openapi\sub_search.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "public_org_nm"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 125)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 13:42:20 --> ErrorException: Undefined array key "public_org_nm"
+in APPPATH\Views\openapi\sub_search.php on line 125.
+ 1 APPPATH\Views\openapi\sub_search.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "public_org_nm"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 125)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 13:42:21 --> ErrorException: Undefined array key "public_org_nm"
+in APPPATH\Views\openapi\sub_search.php on line 125.
+ 1 APPPATH\Views\openapi\sub_search.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "public_org_nm"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 125)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 13:42:27 --> ErrorException: Undefined array key "public_org_nm"
+in APPPATH\Views\openapi\sub_search.php on line 125.
+ 1 APPPATH\Views\openapi\sub_search.php(125): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "public_org_nm"', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php', 125)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\2024\\CI\\app\\Views\\openapi\\sub_search.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('openapi/sub_search', [], true)
+ 5 APPPATH\Controllers\Openapimove.php(23): view('openapi/sub_search', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapimove->searchPage()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
