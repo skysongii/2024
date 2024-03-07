@@ -53,3 +53,129 @@ in APPPATH\Views\openapi\sub_search.php on line 125.
  7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapimove))
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:12:41 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 17.
+ 1 APPPATH\Controllers\Openapisearch.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:12:48 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 17.
+ 1 APPPATH\Controllers\Openapisearch.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:12:59 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 17.
+ 1 APPPATH\Controllers\Openapisearch.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:14:13 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 17.
+ 1 APPPATH\Controllers\Openapisearch.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 17)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->index()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:15:38 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 27.
+ 1 APPPATH\Controllers\Openapisearch.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:43:06 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 27.
+ 1 APPPATH\Controllers\Openapisearch.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:44:51 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 27.
+ 1 APPPATH\Controllers\Openapisearch.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:47:35 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 27.
+ 1 APPPATH\Controllers\Openapisearch.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 27)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:48:29 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 29.
+ 1 APPPATH\Controllers\Openapisearch.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 29)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:50:43 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:51:46 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:52:10 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:52:51 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:52:57 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:53:11 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 31.
+ 1 APPPATH\Controllers\Openapisearch.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 31)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:54:38 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 32.
+ 1 APPPATH\Controllers\Openapisearch.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:55:24 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 32.
+ 1 APPPATH\Controllers\Openapisearch.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 14:55:52 --> ErrorException: Undefined property: App\Controllers\Openapisearch::$input
+in APPPATH\Controllers\Openapisearch.php on line 32.
+ 1 APPPATH\Controllers\Openapisearch.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Openapisearch::$input', 'C:\\xampp\\htdocs\\2024\\CI\\app\\Controllers\\Openapisearch.php', 32)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Openapisearch->chkVal()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Openapisearch))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

@@ -45,7 +45,7 @@
 			<div class="container">
 				<div class="row flex-center">
 					<button type="button" class="btn btn-warning text-dark border border-warning fs-2" onclick="location.href='/2024/CI/public/'">메인페이지로</button>
-					<div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="img-landing-banner" href="/2024/CI/public/Redirect/openapi/"><img class="img-fluid" src="/2024/CI/public/openapi/assets/img/cube.png" alt="hero-header" /></a></div>
+					<div class="col-md-5 col-lg-6 order-0 order-md-1 mt-8 mt-md-0"><a class="img-landing-banner" href="<?=base_url('openapimove/searchpage')?>"><img class="img-fluid" src="/2024/CI/public/openapi/assets/img/cube.png" alt="hero-header" /></a></div>
 					<div class="col-md-7 col-lg-6 py-8 text-md-start text-center">
 						<h1 class="display-1 fs-md-5 fs-lg-6 fs-xl-8 text-light">검색하세요</h1>
 						<h1 class="text-800 mb-5 fs-4">API명/기관명으로 검색하세요<br class="d-none d-xxl-block" /><br>밑에는 목록도 있어요</h1>
@@ -171,6 +171,7 @@
 	<!--    JavaScripts-->
 	<!-- ===============================================-->
 	<script src="/2024/CI/public/openapi/vendors/@popperjs/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<!-- <script src="/2024/CI/public/openapi/vendors/bootstrap/bootstrap.min.js"></script> -->
 	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
@@ -184,10 +185,27 @@
 </body>
 
 <script>
-	let iptApi = document.getElementById('iptApi');	// api명 입력 input란
-	let iptApiBtn = document.getElementById('iptApiBtn');	// api명 입력 후 검색버튼
-	iptApiBtn.addEventListener('click', function() {
-		console.log(iptApi.value);
-	});
+$(function() {
+	console.log('시작');
+});
+
+let iptApi = document.getElementById('iptApi');	// api명 입력 input란
+let iptApiBtn = document.getElementById('iptApiBtn');	// api명 입력 후 검색버튼
+
+iptApiBtn.addEventListener('click', function() {
+	console.log(`iptApiVal: ${iptApi.value}`);
+	$.ajax({
+		url: "<?=base_url();?>openapisearch/chkVal",
+	type: "post",
+	dataType: "text",
+	data: { "iptApiVal": iptApi.value},
+	success: function (data) {
+		console.log(data);
+	}, 
+	error: function (request, status, error) {
+		console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+	}
+	})
+});
 </script>
 </html>
