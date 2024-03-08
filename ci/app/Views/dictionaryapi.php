@@ -395,7 +395,7 @@ function callDicApi(key, val) {
 // }
 
 
-// 국립국어원 표준국어대사전 API 테스트
+// 국립국어원 표준국어대사전 API
 function sendWordArr(word_arr) {
     table01.innerHTML = '';
     table01.innerHTML   += '    <thead>';
@@ -492,13 +492,42 @@ function getTranslate() {
         for (i=0; i<new_word_arr.length; i++) {
             k_title = new_word_arr[i].k_title;
 
+            // console.log(k_title);
         $.ajax({
             url: "/2024/CI/public/Papagoapi/index",
             type: "post",
             traditional: true,	// ajax 배열 넘기기 옵션!
             data: {"k_title" : k_title},
             success: function (data) {
-                console.log(data);
+                // console.log(data);
+                let parseData = JSON.parse(data);
+                console.log(parseData);
+                try {
+                    console.log('try 1');
+                    let tranText = parseData.message.result.translatedText;
+                    console.log('try 2');
+                    new_word_arr[i].e_title = tranText;
+                    console.log('try 3');
+                    new_word_arr[i].idx     = i;
+                    console.log('try 4');
+    
+                    getSubStrRes(new_word_arr[i], i);
+
+                    // console.log('error :', error_code);
+                } catch (e) {
+                    Swal.fire({
+                        icon: "error",
+                        title: "API 서버에 문제가 있어요!!",
+                        text: "파파고 포럼에 문의해주세요.",
+                    });
+                    let error_code = parseData.errorCode;
+                    switch(error_code) {
+                        case '051' : 
+                            console.log('API 서버 에러');
+                    }
+                }
+
+
                 // spinner-grow
                 // let parseData = JSON.parse(data);
                 // let tranText = parseData.message.result.translatedText;
@@ -509,7 +538,7 @@ function getTranslate() {
                 
             },
             error:function(request,status,error){
-                console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
+                // console.log("code:"+request.status+"\n"+"message:"+request.responseText+"\n"+"error:"+error);
             },
             async: false
         });

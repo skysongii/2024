@@ -35,7 +35,7 @@ class Papagoapi extends BaseController
       echo $papaResponse;
     } else {
       // echo "Error 내용:".$response;
-      echo "Error 내용:".$papaResponse;
+      echo $papaResponse;
 
     }
   }
