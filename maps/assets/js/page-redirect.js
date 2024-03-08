@@ -5,13 +5,13 @@
  * Open API 페이지 리다이렉트
  */
 
-let goWhois = () => {
+let goback = () => {   // let 함수이름
     setTimeout(() => {
         // readyToPage();
-        location.href = '/WhoisController';
+        location.href = 'https://makegood-company.com/projects.php';        // ' ' 사이에 경로
     }, 2000);
-    var element = document.getElementById('change-typed')
-    element.innerHTML = '<h2 id="change-typed" class="blink">  Open API 페이지로 이동합니다</h2>';
+    // var element = document.getElementById('change-typed')
+    // element.innerHTML = '<h2 id="change-typed" class="blink">  Open API 페이지로 이동합니다</h2>';
     // console.log(1);
 }
 

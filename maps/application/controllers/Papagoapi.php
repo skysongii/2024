@@ -2,8 +2,8 @@
     $k_title = $_POST['k_title'];
 
     // echo $k_title;
-    $papaClientId = "Zl5cWEvAYNKjJTOjZOp0";
-    $papaClientSecret = "XuOAz8trv0";
+    $papaClientId = "Zl5cWEvAYNKjJTOjZOp0";     // 파파고 클라이언트 ID
+    $papaClientSecret = "XuOAz8trv0";           // 파파고 시크릿 ID
 
     $papaEncText = urlencode($k_title);
     $papaPostvars = "source=ko&target=en&text=".$papaEncText;

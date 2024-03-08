@@ -19,6 +19,7 @@
 		<main>
 			<div class="frame ui">
 				<button type="button" id="local-reload" class="btn btn-primary" onclick="localReload();">새로고침</button>
+				<button type="button" id="local-reload" class="btn btn-primary" onclick="goback();">뒤로가기</button>
                 <input class="btn btn-dark position-absolute bottom-0 end-0" type="button" value="업로드양식"
                onclick="uploadForm();" />
 				<h1 class=" ui--small" sylte="font-size : 1.25rem;">메뉴 목록<br>(새 작업은 새로고침 후 진행)</h1>
@@ -62,7 +63,7 @@
 				<p><strong>author:</strong> csh</p>
 				<!-- <p><strong>dictionary id:</strong> E6EE170EC92AB966F1CE9082E6BFEEC0</p> -->
 				<!-- <p><strong>papago id:</strong> Zl5cWEvAYNKjJTOjZOp0</p> -->
-				<strong> 현재 시각: <span id="now-time"> </span></strong>
+				<strong> 현재 시각: <span id="now-time"></span></strong>
 			</div>
 			<div class="meta meta--2 ui ui--small glitch glitch--1">
 				<p><strong>How to use:</strong></p>
@@ -158,8 +159,9 @@
 		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
 		<script src="../../assets/js/gsap.min.js"></script>
 		<script type="module" src="../../assets/js/index.js"></script>
+        <script src="../../assets/js/page-redirect.js"></script>
 	</body>
-</html>
+    </html>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.3/xlsx.full.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
